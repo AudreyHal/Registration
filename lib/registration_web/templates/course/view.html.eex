@@ -1,0 +1,6 @@
+
+<%= @student.courses |>Enum.map(&(&1.title)) |> Enum.join(", ") %>
+<div class="course-count"></div>
+
+</div>
+</div>

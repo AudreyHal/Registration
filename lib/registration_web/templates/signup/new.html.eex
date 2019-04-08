@@ -1,0 +1,46 @@
+<h1>Register account</h1>
+<%= form_for @changeset, Routes.signup_path(@conn, :create), [as:
+:student, id: "registration-form"], fn f -> %>
+<div class="form-group">
+<%= label f, :name, class: "control-label" %>
+<%= text_input f, :name, class: "form-control" %>
+<%= error_tag f, :name %>
+</div>
+<div class="form-group">
+<%= label f, :email, class: "control-label" %>
+<%= text_input f, :email, class: "form-control" %>
+<%= error_tag f, :email %>
+</div>
+<div class="form-group">
+<%= label f, :matno, class: "control-label" %>
+<%= text_input f, :matno, class: "form-control" %>
+<%= error_tag f, :matno %>
+</div>
+
+<div class="form-group">
+<%= label f, :department, class: "control-label" %>
+<%= text_input f, :department, class: "form-control" %>
+<%= error_tag f, :department %>
+</div>
+
+<div class="form-group">
+<%= label f, :level, class: "control-label" %>
+<%= text_input f, :level, class: "form-control" %>
+<%= error_tag f, :level %>
+</div>
+
+<div class="form-group">
+<%= label f, :hall, class: "control-label" %>
+<%= text_input f, :hall, class: "form-control" %>
+<%= error_tag f, :hall %>
+</div>
+
+
+<div class="form-group"> 
+<%= label f, :password, class: "control-label" %>
+<%= password_input f, :password, placeholder: "Password",
+class: "form-control" %>
+<%= error_tag f, :password %>
+</div>
+<%= submit "Register", class: "btn btn-primary" %>
+<% end %>

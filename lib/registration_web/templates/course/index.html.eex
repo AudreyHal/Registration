@@ -1,0 +1,35 @@
+sssss
+<div class="columns">
+<div class="column">Student</div>
+<div class="column">Course
+
+
+ <table class="table table-striped table-hover trans-table col-11 col-mx-auto">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Title</th>
+          <th>Credits</th>
+           <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+      <%= for course <- @course do %>
+         <tr>
+         <%= form_for @conn, "/courses", [class: "course-form form-inline", as: :course], fn f -> %>
+<td class="id"><%= course.code %></td>
+<td class="id"><%= course.title %></td>
+<td class="id"><%= course.credits %></td>
+<td class="id"><button type="submit" class= "btn btn-primary ">Send</button> </td>
+
+<%= hidden_input f, :course_id, value: course.id %>
+         </tr>
+           <% end %>
+         <% end %>
+       </tbody>
+    </table>
+
+<div class="course-count"></div>
+
+</div>
+</div>
