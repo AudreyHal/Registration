@@ -12,6 +12,7 @@
 alias NimbleCSV.RFC4180, as: CSV
 alias Registration.Repo
 alias Registration.Management.Course
+alias Registration.Management.Student
 
 "priv/seed_data/course_list.csv"
 |> File.read!
@@ -24,3 +25,18 @@ alias Registration.Management.Course
 
   |> Repo.insert
 end)
+
+
+"priv/seed_data/user.csv"
+|> File.read!
+|> CSV.parse_string
+|> Enum.each(fn [_,name,email,matno,hall,level,password,department] ->
+
+
+  level= String.to_integer(level)
+  %Student{name: name, email: email, matno: matno, hall: hall, level: level, password: password, department: department}
+
+  |> Repo.insert
+end)
+
+

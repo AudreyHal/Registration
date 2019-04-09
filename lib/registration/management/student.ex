@@ -12,6 +12,7 @@ defmodule Registration.Management.Student do
     field :level, :integer
     field :matno, :string
     field :name, :string
+    field :department, :string
     field :password, :string, virtual: true
     field :password_hash, :string
     many_to_many(
@@ -27,8 +28,8 @@ defmodule Registration.Management.Student do
   @doc false
   def changeset(%Student{} =student, attrs) do
     student
-    |> cast(attrs, [:name, :email, :matno, :hall, :level, :password])
-    |> validate_required([:name, :email, :matno, :hall, :level, :password])
+    |> cast(attrs, [:name, :email, :matno, :hall, :level, :password, :department])
+    |> validate_required([:name, :email, :matno, :hall, :level, :password, :department])
     |> validate_format(:email, ~r/@/, message: "is invalid")
     |> validate_length(:password, min: 6, max: 100)
 

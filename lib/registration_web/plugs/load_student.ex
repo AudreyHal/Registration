@@ -1,4 +1,4 @@
-defmodule RegistrationWeb.Plugs.Loadstudent do
+defmodule RegistrationWeb.Plugs.LoadStudent do
   import Plug.Conn
   alias Registration.Management
   alias  Registration.Management.Student

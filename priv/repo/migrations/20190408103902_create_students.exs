@@ -10,6 +10,7 @@ defmodule Registration.Repo.Migrations.CreateStudents do
       add :matno, :string
       add :hall, :string
       add :level, :integer
+      add :department, :string
       add :password, :string
       add :password_hash, :string
 

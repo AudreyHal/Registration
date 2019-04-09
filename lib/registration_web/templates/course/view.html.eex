@@ -1,6 +1,34 @@
+<div class="column main-pane">
 
-<%= @student.courses |>Enum.map(&(&1.title)) |> Enum.join(", ") %>
+
+  <div class= "content-pane">
+<div class="title-text"> Selected Courses </div>
+<table class="table table-striped table-hover trans-table column col-11 col-mx-auto">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Title</th>
+          <th>Credits</th>
+           <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+<%= for course <- @student.courses do %>
+         <tr>
+         <%= form_for @conn, "/courses", [class: "course-form form-inline", as: :course], fn f -> %>
+<td class="id"><%= course.code %></td>
+<td class="id"><%= course.title %></td>
+<td class="id"><%= course.credits %></td>
+<td class="id"><button type="submit" class= "btn btn-primary ">Remove</button> </td>
+
+<%= hidden_input f, :course_id, value: course.id %>
+         </tr>
+           <% end %>
+         <% end %>
+       </tbody>
+    </table>
+
 <div class="course-count"></div>
-
+<span class="btn btn-primary" style="margin-top:20px"><a style="color:white" href="/courses"> Add More Courses</a></span>
 </div>
 </div>

@@ -8,17 +8,28 @@
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
   <body>
-<%= render "app_nav.html", conn: @conn, student: @current_student %>
-    <main role="main" class="container">
+<!--<%= render "app_nav.html", conn: @conn, student: @current_student %> -->
+    <main role="main" class="jj">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-      <%= render @view_module, @view_template, assigns %>
+        <div class= "title-pane">
+        <div class= "header-text">Welcome back  <b></b></div>
+       </div>
+           
+   <div class="grid-container columns">
+        <div class=" side-pane column">
+        <div class="icon-container">
+         <button class="bt" id="b2"> My Profile</button>
+            <button class="bt" id="b1" style="background-color:pink">  Registration </button>
+            <button class="bt" id="b2"> Submission</button>
+         </div>
+      </div>
+     
+     
+     <%= render @view_module, @view_template, assigns %>
     </main>
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
-    <script
-			  src="https://code.jquery.com/jquery-3.3.1.min.js"
-			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			  crossorigin="anonymous"></script>
+    
 		
   </body>
 </html>

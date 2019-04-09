@@ -1,3 +1,5 @@
+<div>
+
 <h1>Register account</h1>
 <%= form_for @changeset, Routes.signup_path(@conn, :create), [as:
 :student, id: "registration-form"], fn f -> %>
@@ -44,3 +46,4 @@ class: "form-control" %>
 </div>
 <%= submit "Register", class: "btn btn-primary" %>
 <% end %>
+</div>
