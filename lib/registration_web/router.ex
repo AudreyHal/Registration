@@ -37,7 +37,8 @@ defmodule RegistrationWeb.Router do
     resources "/courses", CourseController
     get "/course/student", CourseController, :view
     get "/logout", SessionController, :delete
-    
+    resources "/papers", PaperController
+
   end
   # Other scopes may use custom stacks.
   # scope "/api", RegistrationWeb do

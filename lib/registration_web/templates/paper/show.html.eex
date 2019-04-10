@@ -1,0 +1,38 @@
+<div class="column main-pane">
+
+
+  <div class= "content-pane">
+
+<div class="title-text">Show Paper</div>
+
+
+
+  <div>
+    <strong>Subject:</strong>
+    <p> <%= @paper.subject %></p>
+  </div>
+
+ 
+
+  <div>
+    <strong>Department:</strong>
+     <p><%= @paper.department %></p>
+  </div>
+
+  <div>
+    <strong>Term:</strong>
+    <p><%= @paper.term %></p>
+  </div>
+   <div>
+    <strong>Body:</strong>
+     <p><%= @paper.body %></p>
+  </div>
+
+
+
+
+
+
+<span class="btn btn-primary" style="margin-top:20px; margin-left:52px"><a style="color:white" href= "/papers"> Back</a></span>
+</div>
+</div>

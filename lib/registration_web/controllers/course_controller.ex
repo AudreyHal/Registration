@@ -7,7 +7,8 @@ defmodule RegistrationWeb.CourseController do
 
   def index(conn, _params) do
   #  student =conn.assigns.student
-    course = Management.list_courses
+  current_student = conn.assigns.current_student
+    course = Management.list_dept_courses(current_student.department)
     render(conn, "index.html", course: course )
   end
 

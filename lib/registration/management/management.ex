@@ -39,6 +39,11 @@ def list_courses do
   Repo.all(Course)
 end
 
+def list_dept_courses(dept) do
+  list_courses()
+  |> Enum.filter(fn(course) -> course.department == dept
+  end)
+end
 
 
 def add_course( cid, %Student{} = student) do

@@ -21,3 +21,15 @@ ajaxCart.init()
 //
 // Local files can be imported directly using relative paths, for example:
 // import socket from "./socket"
+
+document.getElementById("b1").onclick = function() {
+    window.location.href = "/courses";
+  };
+  document.getElementById("b2").onclick = function() {
+
+    window.location.href = "/papers";
+  };
+  document.getElementById("b3").onclick = function() {
+
+    window.location.href = "/";
+  };

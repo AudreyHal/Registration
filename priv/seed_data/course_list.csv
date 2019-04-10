@@ -1,4 +1,9 @@
 id,course_code,course_title,course_credits,department
-1,1,Introduction to electronics,3,Eie
-2,2,Linear Analysis,2,Math
-3,3,Math Models,3,Math
+1,121,Introduction to electronics,3,Eie
+2,321,Linear Analysis,2,Math
+3,322,Math Models,3,Math
+4,399,Chem Models,2,Chemistry
+5,200,Statistics,3,Chemistry
+6,321,Linear Analysis,2,Chemistry
+7,111,Linear Models,3,Chemistry
+8,145,Analytics,3,Chemistry

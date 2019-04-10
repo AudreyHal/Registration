@@ -7,6 +7,7 @@
 <div class="columns">
 <div class="column col-2 field">Name: </div><div class="column col-10 field"><%= @current_student.name %></div>
 <div class="column col-2 field">Mat No: </div><div class="column col-10 field"><%= @current_student.matno %></div>
+<div class="column col-2 field">Department: </div><div class="column col-10 field"><%= @current_student.department%></div>
 <div class="column col-2 field">Email: </div><div class="column col-10 field"><%= @current_student.email %></div>
 <div class="column col-2 field">Level: </div><div class="column col-10 field"><%= @current_student.level %></div>
 <div class="column col-2 field">Hall: </div><div class="column col-10 field"><%= @current_student.hall %></div>

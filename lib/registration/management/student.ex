@@ -4,6 +4,7 @@ defmodule Registration.Management.Student do
   import Comeonin.Bcrypt, only: [hashpwsalt: 1]
   alias Registration.Management.Student
   alias Registration.Management.Course
+  alias Registration.Submission.Paper
 
 
   schema "students" do
@@ -15,6 +16,7 @@ defmodule Registration.Management.Student do
     field :department, :string
     field :password, :string, virtual: true
     field :password_hash, :string
+    has_many :papers, Paper
     many_to_many(
       :courses,
       Course,

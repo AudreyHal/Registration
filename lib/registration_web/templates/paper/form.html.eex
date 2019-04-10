@@ -1,0 +1,34 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+<div class= "columns">
+<div class="column col-2 field "><%= label f, :subject %> </div>
+<div class="column col-10 field"> <%= text_input f, :subject %></div>
+  <%= error_tag f, :subject %>
+ 
+
+
+
+  <div class="column col-2 field "><%= label f, :department %></div>
+ <div class="column col-10 field"> <%= text_input f, :department %></div>
+  <%= error_tag f, :department %>
+
+  <div class="column col-2 field "><%= label f, :term %></div>
+  <div class="column col-10 field"><%= text_input f, :term %></div>
+  <%= error_tag f, :term %>
+
+  <div class="column col-2 field "> <%= label f, :body %></div>
+  <div class="column col-10 field"><%= textarea f, :body %></div>
+  <%= error_tag f, :body %>
+  
+
+  <div class="column col-12" >
+   <button type="submit" class= "btn btn-primary ">Send</button>
+   
+   </div>
+  
+   </div>
+<% end %>

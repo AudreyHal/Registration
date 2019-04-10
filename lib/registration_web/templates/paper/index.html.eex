@@ -1,0 +1,42 @@
+<div class="column main-pane">
+
+
+  <div class= "content-pane">
+
+<div class="title-text">Term Papers</div>
+
+
+
+<table  class="table table-striped table-hover trans-table column col-11 col-mx-auto">
+  <thead>
+    <tr>
+  
+      <th>Subject</th>
+      
+     
+      <th>Action</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for paper <- @papers do %>
+    <tr>
+   
+      <td><%= paper.subject %></td>
+      
+      <td> <%= link "Show", to: Routes.paper_path(@conn, :show, paper) %></td>
+     
+
+      <td>
+      
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+
+<span class="btn btn-primary" style="margin-top:20px; margin-left:52px"><a style="color:white" href= "/papers/new"> Add A Term Paper</a></span>
+</div>
+</div>

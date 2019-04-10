@@ -19,9 +19,9 @@
    <div class="grid-container columns">
         <div class=" side-pane column">
         <div class="icon-container">
-         <button class="bt" id="b2"> My Profile</button>
-            <button class="bt" id="b1" style="background-color:pink">  Registration </button>
-            <button class="bt" id="b2"> Submission</button>
+         <button class="bt" id= "b3" onclick="location.href='/'"> My Profile</button>
+            <button class="bt" id= "b1" style="background-color:#5755d9 ;color:white" onclick="location.href='/courses'">  Registration </button>
+            <button class="bt" id= "b2" onclick="location.href='/papers'"> Submission</button>
          </div>
       </div>
      

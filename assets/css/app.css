@@ -14,6 +14,7 @@
 html{height:100%}
 body{width:100%; min-height: 100% }
 .content-pane{margin:83px 66px 0px 46px ; background-color: #ffffff; height:100%; padding-left:37px; padding-top:18px}
+.content-pane-2{margin:83px 96px 0px 194px ; width: 900px; background-color: #ffffff; height:100%; padding-left:37px; padding-top:18px}
 .content-pane-1{margin:16px 48px 0px 48px ; background-color: #ffffff; padding-top:18px; padding-bottom: 48px;}
 .draft-pane{margin-left: 48px !important; margin-right: 48px !important; margin-top: 32px;}
 .content-title{margin-left: 51px; margin-top: 51px; margin-bottom: 33px; width:180px; height: 28px; font-size: 24px }
@@ -34,9 +35,9 @@ body{width:100%; min-height: 100% }
 .list li:active{ color:#ea4c89; background-color:rgba(234, 76, 137, 0.08) }
 
 .bt{width: 100%; color:#4a4a4a; border: 0px ; padding: 16px 0px; background-color:#ffffff}
-.bt:hover{ color:#ea4c89; background-color:rgba(234, 76, 137, 0.08) }
-.bt:active{ color:#ea4c89; background-color:rgba(234, 76, 137, 0.08) }
-.bt:visited{ color:#ea4c89; background-color:rgba(234, 76, 137, 0.08) }
+.bt:hover{ color:black; background-color:rgb(140, 139, 230, 0.2) }
+.bt:active{ color:black; background-color:rgb(140, 139, 230, 0.2) }
+.bt:visited{ color:black; background-color:rgbargb(140, 139, 230, 0.2)}
 .tab-btn{margin-bottom:0px; border:0px; border-radius: 0px; background-color: transparent; font-size: 20px; height:63px ; padding:0px; padding-left:20px;  padding-right:19px}
 .tab-btn:active{background-color: #f8f8ff; border-right: 5px solid #6964d9}
 .tab-btn:hover{background-color: #f8f8ff; border-right: 5px solid #6964d9}
@@ -47,6 +48,7 @@ body{width:100%; min-height: 100% }
 .tab-btn:active{background-color: #f8f8ff; border-right: 5px solid #6964d9; color:#6964d9}
 .tab-btn:hover{background-color: #f8f8ff; border-right: 5px solid #6964d9; color:#6964d9}
 .tab-btn:visited{background-color: #f8f8ff; border-right: 5px solid #6964d9; color:#6964d9; }
+
 
 .content-pane-details{margin:0px 66px 0px 46px ; background-color: #ffffff; width: 777px; height:489px; padding-left:37px; padding-top:18px}
 .detail-pane{ margin: 18px 36px; }
@@ -60,3 +62,7 @@ body{width:100%; min-height: 100% }
 .title-text{font-size:24px; font-weight:600px; margin-bottom: 30px} 
 .field{margin-bottom: 20px; color:#000011}
 .course_field{}
+.btn-pink{background-color: pink; border: 1px transparent; color:wh}
+#registration-form{width:100%; margin-left: 60px}
+.space{margin-top:20px; width:100px; padding-left:200px  }
+.btnt{ width: 250px; padding: 10px; height: 40px }

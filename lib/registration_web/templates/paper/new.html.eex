@@ -1,0 +1,13 @@
+<div class="column main-pane">
+
+
+  <div class= "content-pane">
+
+
+
+
+<div class="title-text">New Paper</div>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.paper_path(@conn, :create)) %>
+
+
