@@ -35,4 +35,12 @@ def view(conn, _params) do
 student = Management.get_student!(current_student.id)
 render(conn, "view.html", student: student)
 end
+
+def delete(conn, %{"id" => id}) do
+  course = Management.get_course!(id)
+  {:ok, _course} = Management.delete_course(course)
+  conn
+  |> put_flash(:info, "Course Removed.")
+  |> redirect(to: Routes.course_path(conn, :index))
+end
 end

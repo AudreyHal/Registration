@@ -17,11 +17,10 @@ case Management.get_student_by_credentials(session_params) do
 conn
 |> put_flash(:error, "Invalid mat number/password combo")
 student ->
-  path = get_session(conn, :intending_to_visit) || Routes.page_path(conn, :index)
   conn
   |> assign(:current_student, student)
   |> put_session(:student_id, student.id)
-  |> configure_session(renew: true)
+  #|> configure_session(renew: true)
   |> put_flash(:info, "Login successful")
   |> redirect(to: Routes.page_path(conn, :index))
 end

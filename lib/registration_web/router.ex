@@ -7,7 +7,7 @@ defmodule RegistrationWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-   # plug RegistrationWeb.Plugs.Loadstudent
+  #plug RegistrationWeb.Plugs.LoadStudent
   end
 
   pipeline :api do
@@ -26,18 +26,19 @@ defmodule RegistrationWeb.Router do
     post "/signup", SignupController, :create
     get "/login", SessionController, :new
     post "/login", SessionController, :create
+
+
   end
 
 
 
   scope "/", RegistrationWeb do
-    pipe_through [:browser, :frontend, RegistrationWeb.Plugs.AuthenticateStudent]
-
-    get "/", PageController, :index
-    resources "/courses", CourseController
-    get "/course/student", CourseController, :view
-    get "/logout", SessionController, :delete
-    resources "/papers", PaperController
+   pipe_through [:browser, :frontend, RegistrationWeb.Plugs.AuthenticateStudent]
+   get "/", PageController, :index
+   resources "/courses", CourseController
+   get "/course/student", CourseController, :view
+   get "/logout", SessionController, :delete
+   resources "/papers", PaperController
 
   end
   # Other scopes may use custom stacks.

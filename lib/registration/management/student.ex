@@ -31,7 +31,7 @@ defmodule Registration.Management.Student do
   def changeset(%Student{} =student, attrs) do
     student
     |> cast(attrs, [:name, :email, :matno, :hall, :level, :password, :department])
-    |> validate_required([:name, :email, :matno, :hall, :level, :password, :department])
+    |> validate_required([:name, :email, :matno, :hall, :level, :password])
     |> validate_format(:email, ~r/@/, message: "is invalid")
     |> validate_length(:password, min: 6, max: 100)
 

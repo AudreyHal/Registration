@@ -19,5 +19,5 @@ defmodule Registration.SubmissionTest do
       paper
     end
 
-
+  end
 end

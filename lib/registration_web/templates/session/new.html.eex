@@ -3,22 +3,22 @@
 <div class="column main-pane">
 
 
-  <div class= "content-pane-2">
+  <div class= "content-pane_login">
 
-<div class="row">
+<div class="row redact-form">
 <div class="col-9" style="margin: 20px 10px 0px 40px">
 <div class="title-text">Login</div>
 <%= form_for @conn, Routes.session_path(@conn, :create), [as: :session, id: "login-form"], fn f -> %> 
 
-<div class="form-group">
+<div class="form-group redact">
 <%= text_input f, :matno, placeholder: "matno", class:
 "form-control" %>
 </div>
-<div class="form-group">
+<div class="form-group redact">
 <%= password_input f, :password, placeholder: "Password",
 class: "form-control" %>
 </div>
-<%= submit "Log in", class: "btn btn-primary" %>
+<%= submit "Log in", class: "btn btn-primary redact-btn" %>
 <% end %>
 </div>
 </div></div>

@@ -13,15 +13,26 @@
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
         <div class= "title-pane">
-        <div class= "header-text">Welcome back  <b></b></div>
+        <%= if @current_student do %>
+        <div class= "header-text">Welcome back, <b><%=@current_student.name %></b></div>
+        <% else %>
+         <div class= "header-text">Hi There  <b></b></div>
+        <% end %>
        </div>
            
    <div class="grid-container columns">
         <div class=" side-pane column">
         <div class="icon-container">
+        <%= if @current_student do %>
          <button class="bt" id= "b3" onclick="location.href='/'"> My Profile</button>
             <button class="bt" id= "b1" style="background-color:#5755d9 ;color:white" onclick="location.href='/courses'">  Registration </button>
             <button class="bt" id= "b2" onclick="location.href='/papers'"> Submission</button>
+           <% else %>
+             <button class="bt" id= "b1" style="background-color:#5755d9 ;color:white" onclick="location.href='/login'">Login</button>
+            <button class="bt" id= "b2" onclick="location.href='/signup'"> Sign Up </button>
+            <% end %>
+
+
          </div>
       </div>
      

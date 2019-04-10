@@ -11,10 +11,10 @@
   <thead>
     <tr>
   
-      <th>Subject</th>
+      <th class="subject">Subject</th>
       
      
-      <th>Action</th>
+      <th class="action">Action</th>
 
       <th></th>
     </tr>

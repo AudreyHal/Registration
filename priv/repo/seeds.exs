@@ -27,16 +27,5 @@ alias Registration.Management.Student
 end)
 
 
-"priv/seed_data/user.csv"
-|> File.read!
-|> CSV.parse_string
-|> Enum.each(fn [_,name,email,matno,hall,level,password,department] ->
-
-
-  level= String.to_integer(level)
-  %Student{name: name, email: email, matno: matno, hall: hall, level: level, password: password, department: department}
-
-  |> Repo.insert
-end)
 
 

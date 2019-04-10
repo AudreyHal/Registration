@@ -8,7 +8,6 @@ defmodule RegistrationWeb.Plugs.AuthenticateStudent do
     case conn.assigns[:current_student] do
       nil ->
          conn
-         |> put_session(:intending_to_visit, conn.request_path)
          |> put_flash(:info, "You must be signed in")
          |> redirect(to: "/login")
          |> halt

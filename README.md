@@ -1,4 +1,7 @@
 # Registration
+A simple student management system built with the phoenix framework that allows a user to register for available courses in a department and submit term papers for their various department. 
+
+Note: Please ensure to clear the cache of your browser to avoid persisting previous sessions.
 
 To start your Phoenix server:
 

@@ -13,13 +13,14 @@
 
 
   <div class="column col-2 field "><%= label f, :department %></div>
- <div class="column col-10 field"> <%= text_input f, :department %></div>
+  
+ <div class="column col-10 field"> <%= select f, :department, ["Chemistry"] %></div>
   <%= error_tag f, :department %>
 
   <div class="column col-2 field "><%= label f, :term %></div>
   <div class="column col-10 field"><%= text_input f, :term %></div>
   <%= error_tag f, :term %>
-
+ 
   <div class="column col-2 field "> <%= label f, :body %></div>
   <div class="column col-10 field"><%= textarea f, :body %></div>
   <%= error_tag f, :body %>

@@ -15,6 +15,7 @@ html{height:100%}
 body{width:100%; min-height: 100% }
 .content-pane{margin:83px 66px 0px 46px ; background-color: #ffffff; height:100%; padding-left:37px; padding-top:18px}
 .content-pane-2{margin:83px 96px 0px 194px ; width: 900px; background-color: #ffffff; height:100%; padding-left:37px; padding-top:18px}
+.content-pane_login{margin:83px 96px 0px 194px ; width: 900px; background-color: #ffffff; height:400px; padding-left:37px; padding-top:18px}
 .content-pane-1{margin:16px 48px 0px 48px ; background-color: #ffffff; padding-top:18px; padding-bottom: 48px;}
 .draft-pane{margin-left: 48px !important; margin-right: 48px !important; margin-top: 32px;}
 .content-title{margin-left: 51px; margin-top: 51px; margin-bottom: 33px; width:180px; height: 28px; font-size: 24px }
@@ -52,7 +53,8 @@ body{width:100%; min-height: 100% }
 
 .content-pane-details{margin:0px 66px 0px 46px ; background-color: #ffffff; width: 777px; height:489px; padding-left:37px; padding-top:18px}
 .detail-pane{ margin: 18px 36px; }
-.field{color:#000000; font-size: 17px; margin-bottom: 23px}
+.field1{color:#000000; font-size: 17px; margin-bottom: 23px}
+.fields{color:#424242; font-size: 17px; margin-bottom: 23px}
 .head{color:#828283; font-size: 17px; margin-bottom: 23px}
 .breadcrumb .breadcrumb-item:not(:first-child)::before {content:">"}
 .crumb{margin:43px 0px 43.5px 51px; font-size:14px; width:1000px; } 
@@ -66,3 +68,13 @@ body{width:100%; min-height: 100% }
 #registration-form{width:100%; margin-left: 60px}
 .space{margin-top:20px; width:100px; padding-left:200px  }
 .btnt{ width: 250px; padding: 10px; height: 40px }
+.reg-text{padding:30px 0px 16px 43px; font-size: 17px; height:17px;   color: #000000}
+.redact{width:100%}
+.redact-form{margin-left:90px; text-align: center; width:700px }
+.redact-form-2{margin-left:90px;  width:700px }
+.redact-btn{margin-top:20px; width:100% }
+.redact-btn:hover{background-color: lavender}
+.redact-btn:visited{background-color: lavender}
+.redact-btn:active{background-color: lavender}
+.selector{width: 100%}
+.reg_btn{margin-top:30px;  width:100%}

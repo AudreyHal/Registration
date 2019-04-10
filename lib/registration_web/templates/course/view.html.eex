@@ -15,20 +15,21 @@
       <tbody>
 <%= for course <- @student.courses do %>
          <tr>
-         <%= form_for @conn, "/courses", [class: "course-form form-inline", as: :course], fn f -> %>
+
 <td class="id"><%= course.code %></td>
 <td class="id"><%= course.title %></td>
 <td class="id"><%= course.credits %></td>
-<td class="id"><button type="submit" class= "btn btn-primary ">Remove</button> </td>
+<td class="id"> <%= link "Delete", to: Routes.course_path(@conn, :delete, course), class: "btn btn-primary", method: :delete, data: [confirm: "Are you sure?"] %></td>
 
-<%= hidden_input f, :course_id, value: course.id %>
+
          </tr>
-           <% end %>
+           
          <% end %>
        </tbody>
     </table>
 
 <div class="course-count"></div>
+ 
 <span class="btn btn-primary" style="margin-top:20px"><a style="color:white" href="/courses"> Add More Courses</a></span>
 </div>
 </div>

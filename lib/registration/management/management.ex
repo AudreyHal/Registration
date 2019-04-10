@@ -52,5 +52,10 @@ Request.changeset(%Request{}, %{student_id: student.id, course_id: cid})
 
 end
 
+def get_course!(id), do: Repo.get!(Course, id)
+
+def delete_course(%Course{} = course) do
+  Repo.delete(course)
+end
 
 end

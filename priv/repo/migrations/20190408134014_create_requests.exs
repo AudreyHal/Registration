@@ -11,5 +11,6 @@ defmodule Registration.Repo.Migrations.CreateRequests do
 
     create index(:requests, [:student_id])
     create index(:requests, [:course_id])
+    
   end
 end
