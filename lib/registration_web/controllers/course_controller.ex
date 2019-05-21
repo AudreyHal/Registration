@@ -13,6 +13,7 @@ defmodule RegistrationWeb.CourseController do
   end
 
 
+    @spec create(Plug.Conn.t(), map()) :: Plug.Conn.t()
     def create(conn, %{ "course" => course_params}) do
       student = conn.assigns.current_student
       course_id = Map.get(course_params, "course_id")
@@ -30,6 +31,7 @@ defmodule RegistrationWeb.CourseController do
       end
 end
 
+@spec view(Plug.Conn.t(), any()) :: Plug.Conn.t()
 def view(conn, _params) do
   current_student = conn.assigns.current_student
 student = Management.get_student!(current_student.id)

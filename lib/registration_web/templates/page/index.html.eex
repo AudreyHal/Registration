@@ -13,7 +13,7 @@
 <div class="column col-2 field1">Hall: </div><div class="column col-10 fields"><%= @current_student.hall %></div>
 
 
-<div class="column col-2 field1">Courses: </div><div class="column col-10 field course_fields" ><%= @current_student.courses|>Enum.map(&(&1.title)) |> Enum.join(", ") %></div>
+<div class="column col-2 field1">Courses: </div><div class="column col-10 field course_fields" ><%= @current_student.courses|>Enum.map(&(&1.title)) |> Enum.join(",") %></div>
 
 </div>
 <span class="btn btn-primary" style="margin-top:20px"><a style="color:white" href= "/courses"> Add Courses</a></span>

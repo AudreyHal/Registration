@@ -52,8 +52,9 @@ Request.changeset(%Request{}, %{student_id: student.id, course_id: cid})
 
 end
 
-def get_course!(id), do: Repo.get!(Course, id)
+def get_course!(id), do: Repo.get!(Course, id) |> Repo.preload(:students)
 
+@spec delete_course(Registration.Management.Course.t()) :: any()
 def delete_course(%Course{} = course) do
   Repo.delete(course)
 end

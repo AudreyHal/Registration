@@ -22,7 +22,15 @@
   <tbody>
 <%= for paper <- @papers do %>
     <tr>
-   
+   <div class="column main-pane<div class="column main-pane">
+
+
+  <div class= "content-pane">
+">
+
+
+  <div class= "content-pane">
+
       <td><%= paper.subject %></td>
       
       <td> <%= link "Show", to: Routes.paper_path(@conn, :show, paper) %></td>
